@@ -52,3 +52,8 @@ export default function Page() {
     </main>
   );
 }
+// app/page.tsx dosyasının en üstüne ekle:
+import ContactForm from './ContactForm';
+
+// Sayfa içeriğinin (main veya div'in) en altına, footer'dan hemen önce ekle:
+<ContactForm />
