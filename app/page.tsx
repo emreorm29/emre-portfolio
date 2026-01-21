@@ -35,7 +35,7 @@ export default function Page() {
           <div>
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <span>🎯</span> Gelecek Hedefim
-              <ContactForm />
+              
             </h2>
             <p className="text-slate-300 leading-relaxed text-lg">
               Aktüerya alanındaki finansal modelleri modern yazılım teknolojileriyle birleştirerek 
@@ -46,7 +46,9 @@ export default function Page() {
           {/* İletişim Linkleri */}
           <div className="mt-10 flex flex-wrap gap-4 pt-6 border-t border-slate-800">
             <a href="https://github.com/emreorm29" target="_blank" className="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg transition-all">GitHub</a>
+            
             <a href="https://www.linkedin.com/in/emreeorman/" target="_blank" className="bg-blue-600/20 text-blue-400 hover:bg-blue-600/30 px-4 py-2 rounded-lg transition-all border border-blue-600/30">LinkedIn</a>
+            <ContactForm />
             <a href="mailto:emreorman29@gmail.com" className="bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600/30 px-4 py-2 rounded-lg transition-all border border-emerald-600/30 font-bold">E-Posta</a>
           </div>
         </div>
