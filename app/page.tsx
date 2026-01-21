@@ -1,76 +1,67 @@
-import Image from "next/image";
 import ContactForm from "./ContactForm";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white p-6 md:p-12 lg:p-24 selection:bg-blue-500/30">
-      {/* Üst Bilgi / Header */}
-      <header className="max-w-4xl mx-auto mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-2">
-          Hüseyin Emre Orman
-        </h1>
-        <p className="text-xl text-slate-400 font-medium">
-          Yazılım Uzmanı & Aktüer Adayı
-        </p>
-      </header>
+    <main className="min-h-screen bg-[#050505] text-white font-sans selection:bg-blue-500/30">
+      {/* İnce bir üst çizgi efekti */}
+      <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-500 to-transparent"></div>
 
-      {/* Sertifikalar Bölümü */}
-      <section className="max-w-4xl mx-auto mb-20">
-        <div className="flex items-center gap-3 mb-8">
-          <span className="text-3xl">📜</span>
-          <h2 className="text-3xl font-bold">Sertifikalar</h2>
-        </div>
-        
-        <div className="grid gap-8">
-          <div>
-            <p className="text-lg text-slate-300 mb-4 font-semibold">
-              2x ICWW Yazılım Uzmanlığı - Neos Yazılım Akademi
-            </p>
-            
-            {/* Sertifika Görseli + Hover Efekti */}
-            <div className="relative group max-w-2xl overflow-hidden rounded-xl border border-slate-800 shadow-2xl transition-all hover:border-blue-500/50">
+      <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+        {/* Header */}
+        <header className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+            Hüseyin Emre Orman
+          </h1>
+          <p className="text-lg text-blue-400 font-medium tracking-wide uppercase text-sm">
+            Yazılım Uzmanı & Aktüer Adayı
+          </p>
+        </header>
+
+        {/* Sertifikalar */}
+        <section className="mb-20">
+          <h2 className="text-xl font-semibold mb-6 flex items-center gap-2 border-b border-slate-800 pb-2">
+            <span>📜</span> Sertifikalar
+          </h2>
+          <div className="space-y-4">
+            <p className="text-slate-400">2x ICWW Yazılım Uzmanlığı - Neos Yazılım Akademi</p>
+            <div className="relative group overflow-hidden rounded-xl border border-slate-800 bg-slate-900/20 transition-all hover:border-blue-500/40">
               <img 
                 src="/certificate.png" 
-                alt="Neos Yazılım Sertifikası" 
-                className="w-full h-auto transform transition-transform duration-500 group-hover:scale-105"
+                alt="Sertifika" 
+                className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <p className="text-sm font-medium text-blue-400">Detaylı Görüntüle</p>
-              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Gelecek Hedefim Bölümü */}
-      <section className="max-w-4xl mx-auto mb-20">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="text-3xl">🎯</span>
-          <h2 className="text-3xl font-bold">Gelecek Hedefim</h2>
-        </div>
-        <div className="p-6 bg-slate-900/40 rounded-2xl border border-slate-800 backdrop-blur-sm">
-          <p className="text-lg leading-relaxed text-slate-300">
+        {/* Gelecek Hedefim */}
+        <section className="mb-20">
+          <h2 className="text-xl font-semibold mb-6 flex items-center gap-2 border-b border-slate-800 pb-2">
+            <span>🎯</span> Gelecek Hedefim
+          </h2>
+          <p className="text-slate-300 leading-relaxed bg-slate-900/30 p-6 rounded-2xl border border-slate-800/50">
             Aktüerya alanındaki finansal modelleri modern yazılım teknolojileriyle birleştirerek 
             veriye dayalı, yüksek performanslı çözümler üretmeyi hedefliyorum.
           </p>
-        </div>
-      </section>
+        </section>
 
-      {/* İletişim Formu Bölümü */}
-      <section id="contact" className="max-w-4xl mx-auto mb-20">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="text-3xl">📧</span>
-          <h2 className="text-3xl font-bold">Bana Ulaşın</h2>
-        </div>
-        <ContactForm />
-      </section>
+        {/* İletişim Formu */}
+        <section id="contact" className="mb-20">
+          <h2 className="text-xl font-semibold mb-8 flex items-center gap-2 border-b border-slate-800 pb-2">
+            <span>📧</span> Bana Ulaşın
+          </h2>
+          <div className="bg-gradient-to-b from-slate-900/50 to-transparent p-1 rounded-3xl border border-slate-800/50">
+            <ContactForm />
+          </div>
+        </section>
 
-      {/* Alt Bilgi / Footer */}
-      <footer className="max-w-4xl mx-auto pt-8 border-t border-slate-900 flex flex-wrap gap-6 text-sm font-medium text-slate-500">
-        <a href="https://github.com/emreorm29" target="_blank" className="hover:text-blue-400 transition-colors">GitHub</a>
-        <a href="https://www.linkedin.com/in/emreeorman/" target="_blank" className="hover:text-blue-400 transition-colors">LinkedIn</a>
-        <a href="mailto:emreorman29@gmail.com" className="hover:text-blue-400 transition-colors">E-Posta</a>
-      </footer>
+        {/* Footer */}
+        <footer className="pt-8 border-t border-slate-900 flex justify-center gap-8 text-sm text-slate-500">
+          <a href="https://github.com/emreorm29" target="_blank" className="hover:text-white transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/emreeorman/" target="_blank" className="hover:text-white transition-colors">LinkedIn</a>
+          <a href="mailto:emreorman29@gmail.com" className="hover:text-white transition-colors">E-Posta</a>
+        </footer>
+      </div>
     </main>
   );
 }
