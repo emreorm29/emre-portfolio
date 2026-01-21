@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Deneysel özellikleri şimdilik kapalı tutmak en güvenlisidir
+  /* Burayı tamamen boş bırakalım */
 };
 
 export default nextConfig;

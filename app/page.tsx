@@ -23,7 +23,7 @@ export default function Page() {
               <img 
                 src="/sertifika-1.png" 
                 alt="Sertifika" 
-                className="w-full h-auto rounded-xl shadow-lg border border-slate-600"
+                className="max-w-full h-auto rounded-lg shadow-xl"
               />
             </div>
           </div>
