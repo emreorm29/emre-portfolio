@@ -1,3 +1,4 @@
+import ContactForm from './ContactForm';
 export default function Page() {
   return (
     <main className="min-h-screen bg-[#020617] text-white p-6 md:p-20 flex flex-col items-center">
@@ -34,6 +35,7 @@ export default function Page() {
           <div>
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <span>🎯</span> Gelecek Hedefim
+              <ContactForm />
             </h2>
             <p className="text-slate-300 leading-relaxed text-lg">
               Aktüerya alanındaki finansal modelleri modern yazılım teknolojileriyle birleştirerek 
@@ -52,8 +54,3 @@ export default function Page() {
     </main>
   );
 }
-// app/page.tsx dosyasının en üstüne ekle:
-import ContactForm from './ContactForm';
-
-// Sayfa içeriğinin (main veya div'in) en altına, footer'dan hemen önce ekle:
-<ContactForm />
