@@ -17,10 +17,10 @@
     "tailwindcss": "latest"
   },
   "devDependencies": {
-    "@types/node": "^25.0.9",
-    "@types/react": "^19.2.9",
-    "@types/react-dom": "^19.2.3",
-    "babel-plugin-react-compiler": "^1.0.0",
-    "typescript": "^5.9.3"
-  }
+  "babel-plugin-react-compiler": "latest",
+  "typescript": "latest",
+  "@types/react": "latest",
+  "@types/node": "latest",
+  "@types/react-dom": "latest"
+}
 }
