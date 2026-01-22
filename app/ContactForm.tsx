@@ -29,28 +29,48 @@ export default function ContactForm() {
     }
   };
 
+  // app/ContactForm.tsx içeriği
+// ... (üstteki importlar aynı kalacak)
+
   return (
-    <section className="py-10 bg-slate-900/50 rounded-2xl my-10 px-6 max-w-2xl mx-auto border border-slate-800 shadow-2xl">
-      <Toaster position="top-center" reverseOrder={false} /> {/* Bildirimlerin çıkacağı yer */}
-      <h2 className="text-2xl font-bold text-white mb-6 text-center">Bana Ulaşın</h2>
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
-        {/* Input alanların aynı kalabilir, sadece alttaki {status} yazısını silebilirsin */}
+    <div className="w-full bg-slate-900/40 p-6 rounded-2xl border border-slate-800 shadow-xl">
+      <Toaster position="top-center" />
+      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
         <div>
-          <label className="text-slate-300 mb-1 block text-sm">Adınız</label>
-          <input type="text" name="user_name" required className="w-full p-3 rounded-lg bg-slate-800 text-white border border-slate-700 focus:border-blue-500 outline-none transition-all" />
+          <label className="text-slate-400 text-sm mb-2 block font-medium">Adınız</label>
+          <input 
+            type="text" 
+            name="user_name" 
+            required 
+            className="w-full p-3 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+            placeholder="Adınızı giriniz"
+          />
         </div>
         <div>
-          <label className="text-slate-300 mb-1 block text-sm">E-posta</label>
-          <input type="email" name="user_email" required className="w-full p-3 rounded-lg bg-slate-800 text-white border border-slate-700 focus:border-blue-500 outline-none transition-all" />
+          <label className="text-slate-400 text-sm mb-2 block font-medium">E-posta</label>
+          <input 
+            type="email" 
+            name="user_email" 
+            required 
+            className="w-full p-3 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+            placeholder="Email adresiniz"
+          />
         </div>
         <div>
-          <label className="text-slate-300 mb-1 block text-sm">Mesajınız</label>
-          <textarea name="message" required className="w-full p-3 rounded-lg bg-slate-800 text-white border border-slate-700 focus:border-blue-500 outline-none transition-all h-32 resize-none" />
+          <label className="text-slate-400 text-sm mb-2 block font-medium">Mesajınız</label>
+          <textarea 
+            name="message" 
+            required 
+            className="w-full p-3 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all h-32 resize-none"
+            placeholder="Mesajınızı buraya yazın..."
+          />
         </div>
-        <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg mt-2 transition-all active:scale-95 shadow-lg">
-          Gönder
+        <button 
+          type="submit" 
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all active:scale-[0.98] shadow-lg shadow-blue-500/20"
+        >
+          Mesajı Gönder
         </button>
       </form>
-    </section>
-  );
-}
+    </div>
+  );}
