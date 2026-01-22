@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import InterestCalculator from "./InterestCalculator"; // Importu ekle
 
 export default function Home() {
   return (
@@ -40,6 +41,15 @@ export default function Home() {
             "Aktüerya alanındaki finansal modelleri modern yazılım teknolojileriyle birleştirerek veriye dayalı çözümler üretmeyi hedefliyorum."
           </div>
         </section>
+        // ... page.tsx içindeki diğer kısımlar
+
+{/* Bileşik Faiz Hesaplayıcı Bölümü */}
+<section className="mb-20">
+  <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">📊 Aktüeryal Araçlar</h2>
+  <InterestCalculator />
+</section>
+
+{/* İletişim Formu ... */}
 
         {/* Form - Başlığı Sadece Burada Tutuyoruz */}
         <section className="mb-20">
